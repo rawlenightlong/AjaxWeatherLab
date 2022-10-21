@@ -15,17 +15,20 @@ function weatherSearch(city){
         console.log(weather)
 
         const $divCity = $("div.city")
+        $divCity.empty()
         const $divTemperature = $("div.temperature")
+        $divTemperature.empty()
         const $divFeelsLike = $("div.feelsLike")
+        $divFeelsLike.empty()
         const $divWeather = $("div.weather")
-       
+        $divWeather.empty()
         // console.log(weather.name)
         // console.log(weather.weather[0].description)
 
-        $divCity.append(` ${weather.name}`)
-        $divTemperature.append(" " + Math.floor((((weather.main.temp-273.15)*1.8)+32)))
-        $divFeelsLike.append(" " + Math.floor((((weather.main.temp-273.15)*1.8)+32)))
-        $divWeather.append(weather.weather[0].description)
+        $divCity.append(`Weather in: ${weather.name}`)
+        $divTemperature.append("Temperature: " + Math.floor((((weather.main.temp-273.15)*1.8)+32)) + " degrees Fahrenheit")
+        $divFeelsLike.append("Feels Like: " + Math.floor((((weather.main.feels_like-273.15)*1.8)+32)) + " degrees Fahrenheit") 
+        $divWeather.append("Weather Description: " + weather.weather[0].description)
     })
 }
 
@@ -38,6 +41,7 @@ $("input[type=submit]").on("click", (event) => {
     const inputText = $("input[type=text]").val()
     //update screen
     weatherSearch(inputText)
+    
 } )
 
 // weatherSearch("New York")
