@@ -6,8 +6,6 @@ const apiKey = "ee1f44a4b1bd4badd8adbddf5f0d08d0"
 
 console.log(baseUrl, apiKey)
 
-let inputText
-
 function weatherSearch(city){
     const url = `${baseUrl}?q=${city}&APPID=${apiKey}`
     console.log(url)
