@@ -37,9 +37,8 @@ $("input[type=submit]").on("click", (event) => {
     // prevent refresh
     event.preventDefault()
     // grab text from input
-    inputText = $('input[type="text"]').val()
+    const inputText = $("input[type=text]").val()
     //update screen
-    console.log(inputText)
     weatherSearch(inputText)
 } )
 
