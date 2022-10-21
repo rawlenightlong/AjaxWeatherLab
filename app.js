@@ -49,7 +49,18 @@ function weatherSearch(city){
     })
 }
 
-weatherSearch("Los Angeles")
+
+
+$("input[type=submit]").on("click", (event) => {
+    // prevent refresh
+    event.preventDefault()
+    // grab text from input
+    const inputText = $("input[type=text]").val()
+    //update screen
+    weatherSearch(inputText)
+} )
+
+// weatherSearch("Los Angeles")
 
 
 
