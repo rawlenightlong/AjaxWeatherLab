@@ -54,7 +54,7 @@ $("input[type=submit]").on("click", (event) => {
     
 } )
 
-weatherSearch("bowie", "md")
+
 
 
 
